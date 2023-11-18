@@ -60,9 +60,10 @@ RSSItem >> description: aString [
 
 { #category : #fetching }
 RSSItem >> fetchLinkText [
-	| resp |
-	resp := ZnClient new get: (self link).
-	^ (resp asString).
+	| resp linky |
+	linky := (self link) asString.
+	resp := ZnClient new get: (self link asString).
+	^ resp.
 ]
 
 { #category : #accessing }
@@ -71,7 +72,7 @@ RSSItem >> gtViewStoryOn: aView [
 	^ aView textEditor
 		title: 'Read';
 		priority: 110;
-		aptitude: BrGlamorousCodeEditorAptitude;
+		aptitude: BrGlamorousEditorAptitude;
 		text: [ (self fetchLinkText) asRopedText ];
 		actionUpdateButton
 ]

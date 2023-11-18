@@ -18,7 +18,7 @@ Class {
 		'webmaster',
 		'managingEditor'
 	],
-	#category : #'DP-Rss-rss'
+	#category : #'DP-RSS-rss'
 }
 
 { #category : #parsing }
