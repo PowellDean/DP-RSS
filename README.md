@@ -1,1 +1,1 @@
-# DP-RSS
+# DP-RSS## Installation```Metacello new	repository: 'github://PowellDean/DP-RSS:main/src';	baseline: 'DPRSS';	load```## Load Lepiter				After installing with Metacello, you will be able to execute```#BaselineOfDPRSS asClass loadLepiter```
